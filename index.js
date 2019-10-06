@@ -4,13 +4,26 @@ import GameScene from './src/Scenes/GameScene';
 const config = {
     type: Phaser.AUTO,
 
-    width: 640,
-    height: 480,
-    backgroundColor: 0x000000,
+    width: 800,
+    height: 600,
+    backgroundColor: 0x111111,
 
+    audio: {
+        disableWebAudio: true
+    },
+    
     scene: [ GameScene ],
 
-    parent: 'game-container'
+    parent: 'game-container',
+    disableContextMenu: true
 };
 
-const game = new Phaser.Game(config);
+WebFont.load({
+    google: {families: [ 'Gochi Hand' ]},
+    active: startGame,
+    inactive: startGame
+});
+
+function startGame() {
+    const game = new Phaser.Game(config);
+}

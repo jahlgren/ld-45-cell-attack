@@ -5,9 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cell Attack | Ludumdare 45</title>
+    <base href="/ludumdare/ld45/">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #333333;
+        }
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        #game-container {
+            display: flex;
+        }
+        #info {
+            color: #777777;
+            font-size: 1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <div id="game-container"></div>
+    <div id="wrapper">
+        <div id="game-container"></div>
+        <div id="info">(if you see nothing, try refreshing or wait in case the game is loading..)</div>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
